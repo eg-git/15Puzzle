@@ -128,6 +128,7 @@ CGFloat const animationDuration = 0.15;
 {
     UIButton *buttonFrom = [self findButtonFromIndex:indexFrom];
     UIButton *buttonTo = [self findButtonFromIndex:indexTo];
+    [self.puzzleView bringSubviewToFront:buttonFrom];
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          CGRect frame = buttonFrom.frame;
